@@ -1,0 +1,714 @@
+local plr = game.Players.LocalPlayer.Character.Humanoid.DisplayName
+local http_request = http_request;
+if syn then
+	http_request = syn.request
+elseif SENTINEL_V2 then
+	function http_request(tb)
+		return {
+			StatusCode = 200;
+			Body = request(tb.Url, tb.Method, (tb.Body or ''))
+		}
+	end
+end
+
+local body = http_request({Url = 'https://httpbin.org/get'; Method = 'GET'}).Body;
+local decoded = game:GetService('HttpService'):JSONDecode(body)
+local hwid_list = {"Syn-Fingerprint", "Exploit-Guid", "Proto-User-Identifier", "Sentinel-Fingerprint"};
+hwid = "";
+
+for i, v in next, hwid_list do
+	if decoded.headers[v] then
+		hwid = decoded.headers[v];
+		break
+	end
+end
+
+if hwid and plr ~= "HoodShark-SPOOFER" then
+	game:HttpGet('https://cypherbrew.000webhostapp.com/CypherBrew%20Whitelist%20System/CypherSecure.php?user='..plr..'&hwid='..hwid)
+else 
+	game.Players.LocalPlayer:Kick("retard on the way")
+end
+-- Gui to Lua
+-- Version: 3.2
+
+-- Instances:
+
+local CypherBrew = Instance.new("ScreenGui")
+local Main = Instance.new("ImageLabel")
+local CypherBrew_2 = Instance.new("TextLabel")
+local Line = Instance.new("Frame")
+local TabFrame = Instance.new("ImageLabel")
+local home = Instance.new("ImageButton")
+local Home = Instance.new("TextButton")
+local CypherBrew_3 = Instance.new("TextLabel")
+local format_list_bulleted = Instance.new("ImageButton")
+local ScriptHub = Instance.new("TextButton")
+local perm_identity = Instance.new("ImageButton")
+local Credits = Instance.new("TextButton")
+local public = Instance.new("ImageButton")
+local SocialLinks = Instance.new("TextButton")
+local CypherBrew_4 = Instance.new("TextLabel")
+local SocialTab = Instance.new("ImageLabel")
+local Line_2 = Instance.new("Frame")
+local TextLabel = Instance.new("TextLabel")
+local remove = Instance.new("ImageButton")
+local CreditsTab = Instance.new("ImageLabel")
+local Line_3 = Instance.new("Frame")
+local TextLabel_2 = Instance.new("TextLabel")
+local TextLabel_3 = Instance.new("TextLabel")
+local ScriptHubTab = Instance.new("ImageLabel")
+local Line_4 = Instance.new("Frame")
+local ScrollingFrame = Instance.new("ScrollingFrame")
+local Files = Instance.new("ImageLabel")
+local FolderIcon = Instance.new("ImageButton")
+local Line_5 = Instance.new("Frame")
+local UICorner = Instance.new("UICorner")
+local Launch = Instance.new("TextButton")
+local UICorner_2 = Instance.new("UICorner")
+local ComingSoon = Instance.new("TextLabel")
+local Files_2 = Instance.new("ImageLabel")
+local FolderIcon_2 = Instance.new("ImageButton")
+local Line_6 = Instance.new("Frame")
+local UICorner_3 = Instance.new("UICorner")
+local Launch_2 = Instance.new("TextButton")
+local UICorner_4 = Instance.new("UICorner")
+local RagdollSimulator = Instance.new("TextLabel")
+local Files_3 = Instance.new("ImageLabel")
+local FolderIcon_3 = Instance.new("ImageButton")
+local Line_7 = Instance.new("Frame")
+local UICorner_5 = Instance.new("UICorner")
+local LaunchDaHood = Instance.new("TextButton")
+local UICorner_6 = Instance.new("UICorner")
+local DaHood = Instance.new("TextLabel")
+local Files_4 = Instance.new("ImageLabel")
+local FolderIcon_4 = Instance.new("ImageButton")
+local Line_8 = Instance.new("Frame")
+local UICorner_7 = Instance.new("UICorner")
+local Launch_3 = Instance.new("TextButton")
+local UICorner_8 = Instance.new("UICorner")
+local ComingSoon_2 = Instance.new("TextLabel")
+local TextBox = Instance.new("TextBox")
+
+--Properties:
+
+CypherBrew.Name = "CypherBrew"
+CypherBrew.Parent = game.CoreGui
+
+Main.Name = "Main"
+Main.Parent = CypherBrew
+Main.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Main.BackgroundTransparency = 1.000
+Main.Position = UDim2.new(0.0909090936, 0, 0.140703514, 0)
+Main.Size = UDim2.new(0, 458, 0, 403)
+Main.Image = "rbxassetid://3570695787"
+Main.ImageColor3 = Color3.fromRGB(0, 0, 0)
+Main.ScaleType = Enum.ScaleType.Slice
+Main.SliceCenter = Rect.new(100, 100, 100, 100)
+Main.SliceScale = 0.040
+
+CypherBrew_2.Name = "CypherBrew"
+CypherBrew_2.Parent = Main
+CypherBrew_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+CypherBrew_2.BackgroundTransparency = 1.000
+CypherBrew_2.BorderSizePixel = 0
+CypherBrew_2.Size = UDim2.new(0, 107, 0, 34)
+CypherBrew_2.Font = Enum.Font.ArialBold
+CypherBrew_2.Text = "CypherBrew"
+CypherBrew_2.TextColor3 = Color3.fromRGB(255, 255, 255)
+CypherBrew_2.TextSize = 18.000
+CypherBrew_2.TextStrokeColor3 = Color3.fromRGB(255, 0, 0)
+CypherBrew_2.TextStrokeTransparency = 4.000
+CypherBrew_2.TextWrapped = true
+
+Line.Name = "Line"
+Line.Parent = Main
+Line.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Line.BorderSizePixel = 0
+Line.Position = UDim2.new(0, 0, 0.0843672454, 0)
+Line.Size = UDim2.new(0, 458, 0, 2)
+
+TabFrame.Name = "Tab Frame"
+TabFrame.Parent = Main
+TabFrame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TabFrame.BackgroundTransparency = 1.000
+TabFrame.Position = UDim2.new(0, 0, 0.089330025, 0)
+TabFrame.Size = UDim2.new(0, 124, 0, 367)
+TabFrame.Image = "rbxassetid://3570695787"
+TabFrame.ImageColor3 = Color3.fromRGB(11, 11, 11)
+TabFrame.ScaleType = Enum.ScaleType.Slice
+TabFrame.SliceCenter = Rect.new(100, 100, 100, 100)
+TabFrame.SliceScale = 0.040
+
+home.Name = "home"
+home.Parent = TabFrame
+home.BackgroundTransparency = 1.000
+home.Position = UDim2.new(0.0841047913, 0, 0.112582073, 0)
+home.Size = UDim2.new(0, 25, 0, 25)
+home.ZIndex = 2
+home.Image = "rbxassetid://3926305904"
+home.ImageRectOffset = Vector2.new(964, 204)
+home.ImageRectSize = Vector2.new(36, 36)
+
+Home.Name = "Home"
+Home.Parent = home
+Home.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Home.BackgroundTransparency = 1.000
+Home.BorderSizePixel = 0
+Home.Position = UDim2.new(1, 0, 0.239999995, 0)
+Home.Size = UDim2.new(0, 46, 0, 19)
+Home.Font = Enum.Font.ArialBold
+Home.Text = "Home"
+Home.TextColor3 = Color3.fromRGB(195, 195, 195)
+Home.TextSize = 16.000
+Home.MouseButton1Down:connect(function()
+	CreditsTab.Visible = false;
+	ScriptHubTab.Visible = false;
+	SocialTab.Visible = false;
+	CreditsTab.Visible = false;
+end)
+
+CypherBrew_3.Name = "CypherBrew"
+CypherBrew_3.Parent = TabFrame
+CypherBrew_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+CypherBrew_3.BackgroundTransparency = 1.000
+CypherBrew_3.BorderSizePixel = 0
+CypherBrew_3.Size = UDim2.new(0, 100, 0, 34)
+CypherBrew_3.Font = Enum.Font.ArialBold
+CypherBrew_3.Text = "Tab Frame:"
+CypherBrew_3.TextColor3 = Color3.fromRGB(255, 255, 255)
+CypherBrew_3.TextSize = 18.000
+CypherBrew_3.TextStrokeColor3 = Color3.fromRGB(255, 0, 0)
+CypherBrew_3.TextStrokeTransparency = 4.000
+CypherBrew_3.TextWrapped = true
+
+format_list_bulleted.Name = "format_list_bulleted"
+format_list_bulleted.Parent = TabFrame
+format_list_bulleted.BackgroundTransparency = 1.000
+format_list_bulleted.LayoutOrder = 17
+format_list_bulleted.Position = UDim2.new(0.0806451589, 0, 0.209809259, 0)
+format_list_bulleted.Size = UDim2.new(0, 25, 0, 25)
+format_list_bulleted.ZIndex = 2
+format_list_bulleted.Image = "rbxassetid://3926305904"
+format_list_bulleted.ImageRectOffset = Vector2.new(484, 204)
+format_list_bulleted.ImageRectSize = Vector2.new(36, 36)
+
+ScriptHub.Name = "Script Hub"
+ScriptHub.Parent = format_list_bulleted
+ScriptHub.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ScriptHub.BackgroundTransparency = 1.000
+ScriptHub.BorderSizePixel = 0
+ScriptHub.Position = UDim2.new(1, 0, 0.119999997, 0)
+ScriptHub.Size = UDim2.new(0, 75, 0, 19)
+ScriptHub.Font = Enum.Font.ArialBold
+ScriptHub.Text = "ScriptHub"
+ScriptHub.TextColor3 = Color3.fromRGB(195, 195, 195)
+ScriptHub.TextSize = 16.000
+ScriptHub.MouseButton1Down:connect(function()
+	CreditsTab.Visible = false;
+	ScriptHubTab.Visible = true;
+	SocialTab.Visible = false;
+	CreditsTab.Visible = false;
+end)
+
+perm_identity.Name = "perm_identity"
+perm_identity.Parent = TabFrame
+perm_identity.BackgroundTransparency = 1.000
+perm_identity.LayoutOrder = 10
+perm_identity.Position = UDim2.new(0.0806451589, 0, 0.305177122, 0)
+perm_identity.Size = UDim2.new(0, 25, 0, 25)
+perm_identity.ZIndex = 2
+perm_identity.Image = "rbxassetid://3926307971"
+perm_identity.ImageRectOffset = Vector2.new(684, 4)
+perm_identity.ImageRectSize = Vector2.new(36, 36)
+
+Credits.Name = "Credits"
+Credits.Parent = perm_identity
+Credits.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Credits.BackgroundTransparency = 1.000
+Credits.BorderSizePixel = 0
+Credits.Position = UDim2.new(1, 0, 0.239999995, 0)
+Credits.Size = UDim2.new(0, 55, 0, 19)
+Credits.Font = Enum.Font.ArialBold
+Credits.Text = "Credits"
+Credits.TextColor3 = Color3.fromRGB(195, 195, 195)
+Credits.TextSize = 16.000
+Credits.MouseButton1Down:connect(function()
+	CreditsTab.Visible = true;
+	ScriptHubTab.Visible = false;
+	SocialTab.Visible = false;
+	CreditsTab.Visible = false;
+end)
+
+public.Name = "public"
+public.Parent = TabFrame
+public.BackgroundTransparency = 1.000
+public.LayoutOrder = 6
+public.Position = UDim2.new(0.0806451589, 0, 0.400544971, 0)
+public.Size = UDim2.new(0, 25, 0, 25)
+public.ZIndex = 2
+public.Image = "rbxassetid://3926305904"
+public.ImageRectOffset = Vector2.new(604, 324)
+public.ImageRectSize = Vector2.new(36, 36)
+
+SocialLinks.Name = "Social Links"
+SocialLinks.Parent = public
+SocialLinks.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+SocialLinks.BackgroundTransparency = 1.000
+SocialLinks.BorderSizePixel = 0
+SocialLinks.Position = UDim2.new(1, 0, 0.239999995, 0)
+SocialLinks.Size = UDim2.new(0, 89, 0, 19)
+SocialLinks.Font = Enum.Font.ArialBold
+SocialLinks.Text = "Social Links"
+SocialLinks.TextColor3 = Color3.fromRGB(195, 195, 195)
+SocialLinks.TextSize = 16.000
+SocialLinks.MouseButton1Down:connect(function()
+	CreditsTab.Visible = false;
+	ScriptHubTab.Visible = false;
+	SocialTab.Visible = true;
+	CreditsTab.Visible = false;
+end)
+
+CypherBrew_4.Name = "CypherBrew"
+CypherBrew_4.Parent = Main
+CypherBrew_4.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+CypherBrew_4.BackgroundTransparency = 1.000
+CypherBrew_4.BorderSizePixel = 0
+CypherBrew_4.Position = UDim2.new(0.233624458, 0, 0, 0)
+CypherBrew_4.Size = UDim2.new(0, 45, 0, 34)
+CypherBrew_4.Font = Enum.Font.ArialBold
+CypherBrew_4.Text = "[Hub]"
+CypherBrew_4.TextColor3 = Color3.fromRGB(145, 145, 145)
+CypherBrew_4.TextSize = 18.000
+CypherBrew_4.TextStrokeColor3 = Color3.fromRGB(255, 0, 0)
+CypherBrew_4.TextStrokeTransparency = 4.000
+CypherBrew_4.TextWrapped = true
+
+SocialTab.Name = "Social Tab"
+SocialTab.Parent = Main
+SocialTab.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+SocialTab.BackgroundTransparency = 1.000
+SocialTab.Position = UDim2.new(0.270742357, 0, 0.089330025, 0)
+SocialTab.Size = UDim2.new(0, 334, 0, 367)
+SocialTab.Visible = false
+SocialTab.Image = "rbxassetid://3570695787"
+SocialTab.ImageColor3 = Color3.fromRGB(11, 11, 11)
+SocialTab.ScaleType = Enum.ScaleType.Slice
+SocialTab.SliceCenter = Rect.new(100, 100, 100, 100)
+SocialTab.SliceScale = 0.040
+
+Line_2.Name = "Line"
+Line_2.Parent = SocialTab
+Line_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Line_2.BorderSizePixel = 0
+Line_2.Position = UDim2.new(4.65661287e-09, 0, 0, 0)
+Line_2.Size = UDim2.new(0, 1, 0, 367)
+
+TextLabel.Parent = SocialTab
+TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.BackgroundTransparency = 1.000
+TextLabel.BorderSizePixel = 0
+TextLabel.Position = UDim2.new(0.0838323385, 0, 0.111716621, 0)
+TextLabel.Size = UDim2.new(0, 278, 0, 50)
+TextLabel.Font = Enum.Font.ArialBold
+TextLabel.Text = "https://discord.gg/8vJXXs6Xb2"
+TextLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.TextSize = 20.000
+
+remove.Name = "remove"
+remove.Parent = Main
+remove.BackgroundTransparency = 1.000
+remove.LayoutOrder = 6
+remove.Position = UDim2.new(0.91048032, 0, 0, 0)
+remove.Size = UDim2.new(0, 41, 0, 34)
+remove.ZIndex = 2
+remove.Image = "rbxassetid://3926307971"
+remove.ImageRectOffset = Vector2.new(884, 284)
+remove.ImageRectSize = Vector2.new(36, 36)
+remove.MouseButton1Down:connect(function()
+	Main.Visible = false;
+end)
+
+CreditsTab.Name = "Credits Tab"
+CreditsTab.Parent = Main
+CreditsTab.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+CreditsTab.BackgroundTransparency = 1.000
+CreditsTab.Position = UDim2.new(0.270742357, 0, 0.089330025, 0)
+CreditsTab.Size = UDim2.new(0, 334, 0, 367)
+CreditsTab.Visible = false
+CreditsTab.Image = "rbxassetid://3570695787"
+CreditsTab.ImageColor3 = Color3.fromRGB(11, 11, 11)
+CreditsTab.ScaleType = Enum.ScaleType.Slice
+CreditsTab.SliceCenter = Rect.new(100, 100, 100, 100)
+CreditsTab.SliceScale = 0.040
+
+Line_3.Name = "Line"
+Line_3.Parent = CreditsTab
+Line_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Line_3.BorderSizePixel = 0
+Line_3.Position = UDim2.new(4.65661287e-09, 0, 0, 0)
+Line_3.Size = UDim2.new(0, 1, 0, 367)
+
+TextLabel_2.Parent = CreditsTab
+TextLabel_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_2.BackgroundTransparency = 1.000
+TextLabel_2.BorderSizePixel = 0
+TextLabel_2.Position = UDim2.new(0.0838323385, 0, 0.0435967296, 0)
+TextLabel_2.Size = UDim2.new(0, 278, 0, 50)
+TextLabel_2.Font = Enum.Font.ArialBold
+TextLabel_2.Text = "This Is Made By Owner/Founder: SploitGodZ"
+TextLabel_2.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_2.TextScaled = true
+TextLabel_2.TextSize = 20.000
+TextLabel_2.TextWrapped = true
+
+TextLabel_3.Parent = CreditsTab
+TextLabel_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_3.BackgroundTransparency = 1.000
+TextLabel_3.BorderSizePixel = 0
+TextLabel_3.Position = UDim2.new(0.0838323385, 0, 0.185286105, 0)
+TextLabel_3.Size = UDim2.new(0, 278, 0, 50)
+TextLabel_3.Font = Enum.Font.ArialBold
+TextLabel_3.Text = "Administrator Of CypherBrew: ObeseKid#5905"
+TextLabel_3.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_3.TextScaled = true
+TextLabel_3.TextSize = 20.000
+TextLabel_3.TextWrapped = true
+
+ScriptHubTab.Name = "ScriptHub Tab"
+ScriptHubTab.Parent = Main
+ScriptHubTab.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ScriptHubTab.BackgroundTransparency = 1.000
+ScriptHubTab.Position = UDim2.new(0.270742357, 0, 0.173697278, 0)
+ScriptHubTab.Size = UDim2.new(0, 334, 0, 333)
+ScriptHubTab.Visible = false
+ScriptHubTab.Image = "rbxassetid://3570695787"
+ScriptHubTab.ImageColor3 = Color3.fromRGB(11, 11, 11)
+ScriptHubTab.ScaleType = Enum.ScaleType.Slice
+ScriptHubTab.SliceCenter = Rect.new(100, 100, 100, 100)
+ScriptHubTab.SliceScale = 0.040
+
+Line_4.Name = "Line"
+Line_4.Parent = ScriptHubTab
+Line_4.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Line_4.BorderSizePixel = 0
+Line_4.Position = UDim2.new(0, 0, -0.102102101, 0)
+Line_4.Size = UDim2.new(0, 1, 0, 367)
+
+ScrollingFrame.Parent = ScriptHubTab
+ScrollingFrame.Active = true
+ScrollingFrame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ScrollingFrame.BackgroundTransparency = 1.000
+ScrollingFrame.BorderSizePixel = 0
+ScrollingFrame.Position = UDim2.new(0.00299401209, 0, 0.0926430523, 0)
+ScrollingFrame.Size = UDim2.new(0, 333, 0, 319)
+ScrollingFrame.ScrollBarThickness = 6
+
+Files.Name = "Files"
+Files.Parent = ScrollingFrame
+Files.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Files.BackgroundTransparency = 1.000
+Files.Position = UDim2.new(0.53741163, 0, 0.179824233, 0)
+Files.Size = UDim2.new(0, 126, 0, 106)
+Files.Image = "rbxassetid://3570695787"
+Files.ImageColor3 = Color3.fromRGB(15, 15, 15)
+Files.ScaleType = Enum.ScaleType.Slice
+Files.SliceCenter = Rect.new(100, 100, 100, 100)
+Files.SliceScale = 0.080
+
+FolderIcon.Name = "Folder Icon"
+FolderIcon.Parent = Files
+FolderIcon.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+FolderIcon.BackgroundTransparency = 1.000
+FolderIcon.BorderSizePixel = 0
+FolderIcon.Position = UDim2.new(0.325396836, 0, 0.103773586, 0)
+FolderIcon.Size = UDim2.new(0, 43, 0, 43)
+FolderIcon.Image = "http://www.roblox.com/asset/?id=2596691731"
+
+Line_5.Name = "Line"
+Line_5.Parent = Files
+Line_5.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Line_5.BorderSizePixel = 0
+Line_5.Size = UDim2.new(0, 6, 0, 106)
+
+UICorner.CornerRadius = UDim.new(0.5, 0)
+UICorner.Parent = Line_5
+
+Launch.Name = "Launch"
+Launch.Parent = Files
+Launch.BackgroundColor3 = Color3.fromRGB(11, 11, 11)
+Launch.Position = UDim2.new(0.126984134, 0, 0.764150918, 0)
+Launch.Size = UDim2.new(0, 94, 0, 19)
+Launch.Font = Enum.Font.SourceSans
+Launch.Text = "Launch"
+Launch.TextColor3 = Color3.fromRGB(218, 218, 218)
+Launch.TextSize = 14.000
+
+UICorner_2.CornerRadius = UDim.new(0.150000006, 0)
+UICorner_2.Parent = Launch
+
+ComingSoon.Name = "Coming Soon."
+ComingSoon.Parent = Files
+ComingSoon.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ComingSoon.BackgroundTransparency = 1.000
+ComingSoon.BorderSizePixel = 0
+ComingSoon.Position = UDim2.new(0.087301597, 0, 0.46226418, 0)
+ComingSoon.Size = UDim2.new(0, 104, 0, 16)
+ComingSoon.Font = Enum.Font.SourceSans
+ComingSoon.Text = "Coming Soon."
+ComingSoon.TextColor3 = Color3.fromRGB(162, 162, 162)
+ComingSoon.TextSize = 14.000
+
+Files_2.Name = "Files"
+Files_2.Parent = ScrollingFrame
+Files_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Files_2.BackgroundTransparency = 1.000
+Files_2.Position = UDim2.new(0.541862249, 0, 0.00116601586, 0)
+Files_2.Size = UDim2.new(0, 126, 0, 106)
+Files_2.Image = "rbxassetid://3570695787"
+Files_2.ImageColor3 = Color3.fromRGB(15, 15, 15)
+Files_2.ScaleType = Enum.ScaleType.Slice
+Files_2.SliceCenter = Rect.new(100, 100, 100, 100)
+Files_2.SliceScale = 0.080
+
+FolderIcon_2.Name = "Folder Icon"
+FolderIcon_2.Parent = Files_2
+FolderIcon_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+FolderIcon_2.BackgroundTransparency = 1.000
+FolderIcon_2.BorderSizePixel = 0
+FolderIcon_2.Position = UDim2.new(0.325396836, 0, 0.103773586, 0)
+FolderIcon_2.Size = UDim2.new(0, 43, 0, 43)
+FolderIcon_2.Image = "http://www.roblox.com/asset/?id=2596691731"
+
+Line_6.Name = "Line"
+Line_6.Parent = Files_2
+Line_6.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Line_6.BorderSizePixel = 0
+Line_6.Size = UDim2.new(0, 6, 0, 106)
+
+UICorner_3.CornerRadius = UDim.new(0.5, 0)
+UICorner_3.Parent = Line_6
+
+Launch_2.Name = "Launch"
+Launch_2.Parent = Files_2
+Launch_2.BackgroundColor3 = Color3.fromRGB(11, 11, 11)
+Launch_2.Position = UDim2.new(0.126984134, 0, 0.764150918, 0)
+Launch_2.Size = UDim2.new(0, 94, 0, 19)
+Launch_2.Font = Enum.Font.SourceSans
+Launch_2.Text = "Launch"
+Launch_2.TextColor3 = Color3.fromRGB(218, 218, 218)
+Launch_2.TextSize = 14.000
+
+UICorner_4.CornerRadius = UDim.new(0.150000006, 0)
+UICorner_4.Parent = Launch_2
+
+RagdollSimulator.Name = "Ragdoll Simulator"
+RagdollSimulator.Parent = Files_2
+RagdollSimulator.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+RagdollSimulator.BackgroundTransparency = 1.000
+RagdollSimulator.BorderSizePixel = 0
+RagdollSimulator.Position = UDim2.new(0.087301597, 0, 0.46226418, 0)
+RagdollSimulator.Size = UDim2.new(0, 104, 0, 16)
+RagdollSimulator.Font = Enum.Font.SourceSans
+RagdollSimulator.Text = "Ragdoll Simulator"
+RagdollSimulator.TextColor3 = Color3.fromRGB(162, 162, 162)
+RagdollSimulator.TextSize = 14.000
+
+Files_3.Name = "Files"
+Files_3.Parent = ScrollingFrame
+Files_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Files_3.BackgroundTransparency = 1.000
+Files_3.Position = UDim2.new(0.0268921629, 0, 0.00116601586, 0)
+Files_3.Size = UDim2.new(0, 126, 0, 106)
+Files_3.Image = "rbxassetid://3570695787"
+Files_3.ImageColor3 = Color3.fromRGB(15, 15, 15)
+Files_3.ScaleType = Enum.ScaleType.Slice
+Files_3.SliceCenter = Rect.new(100, 100, 100, 100)
+Files_3.SliceScale = 0.080
+
+FolderIcon_3.Name = "Folder Icon"
+FolderIcon_3.Parent = Files_3
+FolderIcon_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+FolderIcon_3.BackgroundTransparency = 1.000
+FolderIcon_3.BorderSizePixel = 0
+FolderIcon_3.Position = UDim2.new(0.325396836, 0, 0.103773586, 0)
+FolderIcon_3.Size = UDim2.new(0, 43, 0, 43)
+FolderIcon_3.Image = "http://www.roblox.com/asset/?id=2596691731"
+
+Line_7.Name = "Line"
+Line_7.Parent = Files_3
+Line_7.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Line_7.BorderSizePixel = 0
+Line_7.Size = UDim2.new(0, 6, 0, 106)
+
+UICorner_5.CornerRadius = UDim.new(0.5, 0)
+UICorner_5.Parent = Line_7
+
+LaunchDaHood.Name = "LaunchDaHood"
+LaunchDaHood.Parent = Files_3
+LaunchDaHood.BackgroundColor3 = Color3.fromRGB(11, 11, 11)
+LaunchDaHood.Position = UDim2.new(0.126984134, 0, 0.764150918, 0)
+LaunchDaHood.Size = UDim2.new(0, 94, 0, 19)
+LaunchDaHood.Font = Enum.Font.SourceSans
+LaunchDaHood.Text = "Launch"
+LaunchDaHood.TextColor3 = Color3.fromRGB(218, 218, 218)
+LaunchDaHood.TextSize = 14.000
+
+UICorner_6.CornerRadius = UDim.new(0.150000006, 0)
+UICorner_6.Parent = LaunchDaHood
+LaunchDaHood.MouseButton1Down:connect(function()
+loadstring(game:HttpGet(('https://raw.githubusercontent.com/EnvySploitGodZ/CypherBrew/main/.ecrypted'),true))()
+end)
+
+DaHood.Name = "Da Hood"
+DaHood.Parent = Files_3
+DaHood.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+DaHood.BackgroundTransparency = 1.000
+DaHood.BorderSizePixel = 0
+DaHood.Position = UDim2.new(0.087301597, 0, 0.46226418, 0)
+DaHood.Size = UDim2.new(0, 104, 0, 16)
+DaHood.Font = Enum.Font.SourceSans
+DaHood.Text = "Da Hood"
+DaHood.TextColor3 = Color3.fromRGB(162, 162, 162)
+DaHood.TextSize = 14.000
+
+Files_4.Name = "Files"
+Files_4.Parent = ScrollingFrame
+Files_4.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Files_4.BackgroundTransparency = 1.000
+Files_4.Position = UDim2.new(0.0238981508, 0, 0.179824248, 0)
+Files_4.Size = UDim2.new(0, 126, 0, 106)
+Files_4.Image = "rbxassetid://3570695787"
+Files_4.ImageColor3 = Color3.fromRGB(15, 15, 15)
+Files_4.ScaleType = Enum.ScaleType.Slice
+Files_4.SliceCenter = Rect.new(100, 100, 100, 100)
+Files_4.SliceScale = 0.080
+
+FolderIcon_4.Name = "Folder Icon"
+FolderIcon_4.Parent = Files_4
+FolderIcon_4.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+FolderIcon_4.BackgroundTransparency = 1.000
+FolderIcon_4.BorderSizePixel = 0
+FolderIcon_4.Position = UDim2.new(0.325396836, 0, 0.103773586, 0)
+FolderIcon_4.Size = UDim2.new(0, 43, 0, 43)
+FolderIcon_4.Image = "http://www.roblox.com/asset/?id=2596691731"
+
+Line_8.Name = "Line"
+Line_8.Parent = Files_4
+Line_8.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Line_8.BorderSizePixel = 0
+Line_8.Size = UDim2.new(0, 6, 0, 106)
+
+UICorner_7.CornerRadius = UDim.new(0.5, 0)
+UICorner_7.Parent = Line_8
+
+Launch_3.Name = "Launch"
+Launch_3.Parent = Files_4
+Launch_3.BackgroundColor3 = Color3.fromRGB(11, 11, 11)
+Launch_3.Position = UDim2.new(0.126984134, 0, 0.764150918, 0)
+Launch_3.Size = UDim2.new(0, 94, 0, 19)
+Launch_3.Font = Enum.Font.SourceSans
+Launch_3.Text = "Launch"
+Launch_3.TextColor3 = Color3.fromRGB(218, 218, 218)
+Launch_3.TextSize = 14.000
+
+UICorner_8.CornerRadius = UDim.new(0.150000006, 0)
+UICorner_8.Parent = Launch_3
+
+ComingSoon_2.Name = "Coming Soon."
+ComingSoon_2.Parent = Files_4
+ComingSoon_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ComingSoon_2.BackgroundTransparency = 1.000
+ComingSoon_2.BorderSizePixel = 0
+ComingSoon_2.Position = UDim2.new(0.087301597, 0, 0.46226418, 0)
+ComingSoon_2.Size = UDim2.new(0, 104, 0, 16)
+ComingSoon_2.Font = Enum.Font.SourceSans
+ComingSoon_2.Text = "Coming Soon."
+ComingSoon_2.TextColor3 = Color3.fromRGB(162, 162, 162)
+ComingSoon_2.TextSize = 14.000
+
+TextBox.Parent = ScriptHubTab
+TextBox.BackgroundColor3 = Color3.fromRGB(13, 13, 13)
+TextBox.BorderSizePixel = 0
+TextBox.Position = UDim2.new(0.00299401209, 0, -0.102102101, 0)
+TextBox.Size = UDim2.new(0, 333, 0, 34)
+TextBox.Font = Enum.Font.ArialBold
+TextBox.PlaceholderText = "Search Games"
+TextBox.Text = ""
+TextBox.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextBox.TextSize = 14.000
+
+-- Scripts:
+
+local function ICOZ_fake_script() -- Main.Dragify 
+	local script = Instance.new('LocalScript', Main)
+
+	local UIS = game:GetService("UserInputService")
+	function dragify(Frame)
+	    dragToggle = nil
+	    local dragSpeed = 0
+	    dragInput = nil
+	    dragStart = nil
+	    local dragPos = nil
+	    function updateInput(input)
+	        local Delta = input.Position - dragStart
+	        local Position = UDim2.new(startPos.X.Scale, startPos.X.Offset + Delta.X, startPos.Y.Scale, startPos.Y.Offset + Delta.Y)
+	        game:GetService("TweenService"):Create(Frame, TweenInfo.new(0.25), {Position = Position}):Play()
+	    end
+	    Frame.InputBegan:Connect(function(input)
+	        if (input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch) and UIS:GetFocusedTextBox() == nil then
+	            dragToggle = true
+	            dragStart = input.Position
+	            startPos = Frame.Position
+	            input.Changed:Connect(function()
+	                if input.UserInputState == Enum.UserInputState.End then
+	                    dragToggle = false
+	                end
+	            end)
+	        end
+	    end)
+	    Frame.InputChanged:Connect(function(input)
+	        if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
+	            dragInput = input
+	        end
+	    end)
+	    game:GetService("UserInputService").InputChanged:Connect(function(input)
+	        if input == dragInput and dragToggle then
+	            updateInput(input)
+	        end
+	    end)
+	end
+	
+	dragify(script.Parent)
+end
+coroutine.wrap(ICOZ_fake_script)()
+local function FIREMET_fake_script() -- ScrollingFrame.LocalScript 
+	local script = Instance.new('LocalScript', ScrollingFrame)
+
+	local scroll = script.Parent.ScrollingFrame
+	local textbox = script.Parent.TextBox.Text
+	
+	textbox.Changed:Connect(function()
+		local text = textbox:lower()
+		if text ~= "" then
+			local buttons = scroll:GetDescendants()
+			for _, button in pairs(buttons) do
+				if button:IsA("TextLabel") then
+		local buttonText = button.Text
+					if string.find(text, buttonText) then
+						button.Visible = true;
+					else
+						button.Visible = false;
+					end
+				end
+			end
+		else
+			local buttons = scroll:GetDescendants()
+			for _, button in pairs(buttons) do
+				if button:IsA("TextLabel") then
+						button.Visible = true;
+				end
+			end
+		end
+	end)
+end
+coroutine.wrap(FIREMET_fake_script)()
