@@ -1,5 +1,5 @@
 ![](https://raw.githubusercontent.com/CryptedEx/github-stats/master/generated/overview.svg#gh-dark-mode-only)
-![](https://raw.githubusercontent.com/CryptedEx/github-stats/master/generated/overview.svg#gh-light-mode-only)
+
 
 - 👋 Hi, I’m @FallenCrypt
 - 👀 I’m interested in Roblox Exploiting
