@@ -1,0 +1,823 @@
+-- Gui to Lua
+-- Version: 3.2
+
+-- Instances:
+
+local LegacyX = Instance.new("ScreenGui")
+local OpenFrame = Instance.new("Frame")
+local Open = Instance.new("TextButton")
+local Main = Instance.new("Frame")
+local Frame1 = Instance.new("Frame")
+local Legacy = Instance.new("TextLabel")
+local X = Instance.new("TextLabel")
+local Frame2 = Instance.new("Frame")
+local Credits = Instance.new("TextLabel")
+local Line = Instance.new("TextButton")
+local Waves = Instance.new("TextButton")
+local Kombat = Instance.new("TextLabel")
+local Page1 = Instance.new("TextLabel")
+local FlyBat = Instance.new("TextButton")
+local FlyHammer = Instance.new("TextButton")
+local FlyAk47 = Instance.new("TextButton")
+local FlyPitchfork = Instance.new("TextButton")
+local FlyTacticalShotgun = Instance.new("TextButton")
+local FlyFramethrower = Instance.new("TextButton")
+local FlyRPG = Instance.new("TextButton")
+local FlyStopsign = Instance.new("TextButton")
+local MeleeReach = Instance.new("TextButton")
+local AntiStomp = Instance.new("TextButton")
+local AntiAFK = Instance.new("TextButton")
+local LagMusic = Instance.new("TextButton")
+local ChatLogs = Instance.new("TextButton")
+local AntiBag = Instance.new("TextButton")
+local TpQ = Instance.new("TextButton")
+local BulletProof = Instance.new("TextButton")
+local UnlockPlayers = Instance.new("TextButton")
+local LockPlayers = Instance.new("TextButton")
+local AllEmotes = Instance.new("TextButton")
+local AllAnimation = Instance.new("TextButton")
+local FlyX = Instance.new("TextButton")
+local Page2 = Instance.new("TextLabel")
+local Weapons = Instance.new("TextLabel")
+local TextBox = Instance.new("TextBox")
+local ReachKnife = Instance.new("TextButton")
+local ReachStopsign = Instance.new("TextButton")
+local Close = Instance.new("TextButton")
+
+--Properties:
+
+LegacyX.Name = "Legacy X"
+LegacyX.Parent = game.CoreGui
+LegacyX.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+OpenFrame.Name = "OpenFrame"
+OpenFrame.Parent = LegacyX
+OpenFrame.Active = true
+OpenFrame.BackgroundColor3 = Color3.fromRGB(31, 31, 31)
+OpenFrame.BorderSizePixel = 0
+OpenFrame.Position = UDim2.new(0, 0, 0.572864294, 0)
+OpenFrame.Size = UDim2.new(0, 87, 0, 35)
+
+Open.Name = "Open"
+Open.Parent = OpenFrame
+Open.BackgroundColor3 = Color3.fromRGB(27, 27, 27)
+Open.BorderSizePixel = 0
+Open.Position = UDim2.new(0, 0, 0.0857142881, 0)
+Open.Size = UDim2.new(0, 87, 0, 29)
+Open.Font = Enum.Font.SourceSans
+Open.Text = "Open Legacy X"
+Open.TextColor3 = Color3.fromRGB(255, 255, 255)
+Open.TextSize = 14.000
+Open.MouseButton1Down:connect(function()
+	wait(0) local A_1 = "[Legacy Trash] Legacy Trash Script Been Opened" local A_2 = "All" local Event = game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest Event:FireServer(A_1, A_2)
+	Main.Visible = true
+	OpenFrame.Visible = false
+end)
+
+Main.Name = "Main"
+Main.Parent = LegacyX
+Main.Active = true
+Main.BackgroundColor3 = Color3.fromRGB(18, 18, 18)
+Main.BorderSizePixel = 0
+Main.Position = UDim2.new(0.146204382, 0, 0.236180887, 0)
+Main.Size = UDim2.new(0, 753, 0, 414)
+Main.Visible = false
+Main.Draggable = true
+
+Frame1.Name = "Frame1"
+Frame1.Parent = Main
+Frame1.BackgroundColor3 = Color3.fromRGB(12, 12, 12)
+Frame1.BorderSizePixel = 0
+Frame1.Size = UDim2.new(0, 753, 0, 34)
+
+Legacy.Name = "Legacy"
+Legacy.Parent = Frame1
+Legacy.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Legacy.BackgroundTransparency = 1.000
+Legacy.BorderSizePixel = 0
+Legacy.Position = UDim2.new(0.401062429, 0, 0, 0)
+Legacy.Size = UDim2.new(0, 98, 0, 34)
+Legacy.Font = Enum.Font.Cartoon
+Legacy.Text = "Legacy"
+Legacy.TextColor3 = Color3.fromRGB(255, 255, 255)
+Legacy.TextScaled = true
+Legacy.TextSize = 14.000
+Legacy.TextWrapped = true
+
+X.Name = "X"
+X.Parent = Frame1
+X.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+X.BackgroundTransparency = 1.000
+X.BorderSizePixel = 0
+X.Position = UDim2.new(0.529880524, 0, 0, 0)
+X.Size = UDim2.new(0, 32, 0, 34)
+X.Font = Enum.Font.Cartoon
+X.Text = "Trash"
+X.TextColor3 = Color3.fromRGB(255, 0, 0)
+X.TextScaled = true
+X.TextSize = 14.000
+X.TextWrapped = true
+
+Frame2.Name = "Frame2"
+Frame2.Parent = Main
+Frame2.BackgroundColor3 = Color3.fromRGB(12, 12, 12)
+Frame2.BorderSizePixel = 0
+Frame2.Position = UDim2.new(0, 0, 0.937198043, 0)
+Frame2.Size = UDim2.new(0, 753, 0, 26)
+
+Credits.Name = "Credits"
+Credits.Parent = Frame2
+Credits.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Credits.BackgroundTransparency = 1.000
+Credits.BorderSizePixel = 0
+Credits.Size = UDim2.new(0, 753, 0, 26)
+Credits.Font = Enum.Font.Cartoon
+Credits.Text = "Made By SploitGodZ#2861 and Few Helpers Are Az123(Owner Of OneBullet360) "
+Credits.TextColor3 = Color3.fromRGB(255, 255, 255)
+Credits.TextSize = 14.000
+
+Line.Name = "Line"
+Line.Parent = Main
+Line.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Line.BorderSizePixel = 0
+Line.Position = UDim2.new(0, 0, 0.608695626, 0)
+Line.Size = UDim2.new(0, 753, 0, 7)
+Line.Font = Enum.Font.SourceSans
+Line.Text = ""
+Line.TextColor3 = Color3.fromRGB(0, 0, 0)
+Line.TextSize = 14.000
+
+Waves.Name = "Waves"
+Waves.Parent = Main
+Waves.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
+Waves.BorderSizePixel = 0
+Waves.Position = UDim2.new(0.0119521916, 0, 0.202898577, 0)
+Waves.Size = UDim2.new(0, 129, 0, 35)
+Waves.Font = Enum.Font.SourceSans
+Waves.Text = "Waves"
+Waves.TextColor3 = Color3.fromRGB(0, 0, 0)
+Waves.TextSize = 14.000
+Waves.MouseButton1Down:connect(function()
+end)
+
+Kombat.Name = "Kombat"
+Kombat.Parent = Main
+Kombat.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Kombat.BackgroundTransparency = 1.000
+Kombat.BorderSizePixel = 0
+Kombat.Position = UDim2.new(0, 0, 0.0821256042, 0)
+Kombat.Size = UDim2.new(0, 98, 0, 34)
+Kombat.Font = Enum.Font.Cartoon
+Kombat.Text = "Kombat"
+Kombat.TextColor3 = Color3.fromRGB(255, 255, 255)
+Kombat.TextScaled = true
+Kombat.TextSize = 14.000
+Kombat.TextWrapped = true
+
+Page1.Name = "Page1"
+Page1.Parent = Main
+Page1.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Page1.BackgroundTransparency = 1.000
+Page1.BorderSizePixel = 0
+Page1.Position = UDim2.new(0.122177988, 0, 0.0821256042, 0)
+Page1.Size = UDim2.new(0, 71, 0, 34)
+Page1.Font = Enum.Font.Cartoon
+Page1.Text = "Page"
+Page1.TextColor3 = Color3.fromRGB(255, 0, 0)
+Page1.TextScaled = true
+Page1.TextSize = 14.000
+Page1.TextWrapped = true
+
+FlyBat.Name = "Fly Bat"
+FlyBat.Parent = Main
+FlyBat.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
+FlyBat.BorderSizePixel = 0
+FlyBat.Position = UDim2.new(0.414342642, 0, 0.722222269, 0)
+FlyBat.Size = UDim2.new(0, 129, 0, 35)
+FlyBat.Font = Enum.Font.SourceSans
+FlyBat.Text = "Fly Bat"
+FlyBat.TextColor3 = Color3.fromRGB(0, 0, 0)
+FlyBat.TextSize = 14.000
+FlyBat.MouseButton1Down:connect(function()
+	wait(0) local A_1 = "[Legacy Trash] Bat Fly Enabled" local A_2 = "All" local Event = game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest Event:FireServer(A_1, A_2) 
+	for i,v in pairs(game:GetService'Players'.LocalPlayer.Character:GetChildren())do                 if v:isA("Tool") then                     local a = Instance.new("SelectionBox",v.Handle)                     a.Adornee = v.Handle                         v.GripPos = Vector3.new(10,10,10)                     lplayer.Character.Humanoid:UnequipTools()                 end end
+end)
+
+FlyHammer.Name = "Fly Hammer"
+FlyHammer.Parent = Main
+FlyHammer.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
+FlyHammer.BorderSizePixel = 0
+FlyHammer.Position = UDim2.new(0.585657358, 0, 0.722222269, 0)
+FlyHammer.Size = UDim2.new(0, 129, 0, 35)
+FlyHammer.Font = Enum.Font.SourceSans
+FlyHammer.Text = "Fly Hammer"
+FlyHammer.TextColor3 = Color3.fromRGB(0, 0, 0)
+FlyHammer.TextSize = 14.000
+FlyHammer.MouseButton1Down:connect(function()
+	wait(0) local A_1 = "[Legacy Trash] Fly Hammer Fly Enabled" local A_2 = "All" local Event = game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest Event:FireServer(A_1, A_2) 
+	for i,v in pairs(game:GetService'Players'.LocalPlayer.Character:GetChildren())do                 if v:isA("Tool") then                     local a = Instance.new("SelectionBox",v.Handle)                     a.Adornee = v.Handle                         v.GripPos = Vector3.new(10,10,10)                     lplayer.Character.Humanoid:UnequipTools()                 end end
+end)
+
+FlyAk47.Name = "Fly Ak47"
+FlyAk47.Parent = Main
+FlyAk47.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
+FlyAk47.BorderSizePixel = 0
+FlyAk47.Position = UDim2.new(0.755644202, 0, 0.722222209, 0)
+FlyAk47.Size = UDim2.new(0, 129, 0, 35)
+FlyAk47.Font = Enum.Font.SourceSans
+FlyAk47.Text = "Fly ak47"
+FlyAk47.TextColor3 = Color3.fromRGB(0, 0, 0)
+FlyAk47.TextSize = 14.000
+FlyAk47.MouseButton1Down:connect(function()
+	wait(0) local A_1 = "[Legacy Trash] Ak47 Fly Enabled" local A_2 = "All" local Event = game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest Event:FireServer(A_1, A_2) 
+	for i,v in pairs(game:GetService'Players'.LocalPlayer.Character:GetChildren())do                 if v:isA("Tool") then                     local a = Instance.new("SelectionBox",v.Handle)                     a.Adornee = v.Handle                         v.GripPos = Vector3.new(10,10,10)                     lplayer.Character.Humanoid:UnequipTools()                 end end
+end)
+
+FlyPitchfork.Name = "Fly Pitchfork"
+FlyPitchfork.Parent = Main
+FlyPitchfork.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
+FlyPitchfork.BorderSizePixel = 0
+FlyPitchfork.Position = UDim2.new(0.414342642, 0, 0.826086998, 0)
+FlyPitchfork.Size = UDim2.new(0, 129, 0, 35)
+FlyPitchfork.Font = Enum.Font.SourceSans
+FlyPitchfork.Text = "Fly Pitchfork"
+FlyPitchfork.TextColor3 = Color3.fromRGB(0, 0, 0)
+FlyPitchfork.TextSize = 14.000
+FlyPitchfork.MouseButton1Down:connect(function()
+	wait(0) local A_1 = "[Legacy Trash] Pitchfork Fly Enabled" local A_2 = "All" local Event = game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest Event:FireServer(A_1, A_2) 
+	for i,v in pairs(game:GetService'Players'.LocalPlayer.Character:GetChildren())do                 if v:isA("Tool") then                     local a = Instance.new("SelectionBox",v.Handle)                     a.Adornee = v.Handle                         v.GripPos = Vector3.new(10,10,10)                     lplayer.Character.Humanoid:UnequipTools()                 end end
+end)
+
+FlyTacticalShotgun.Name = "Fly Tactical Shotgun"
+FlyTacticalShotgun.Parent = Main
+FlyTacticalShotgun.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
+FlyTacticalShotgun.BorderSizePixel = 0
+FlyTacticalShotgun.Position = UDim2.new(0.755644083, 0, 0.826086998, 0)
+FlyTacticalShotgun.Size = UDim2.new(0, 129, 0, 35)
+FlyTacticalShotgun.Font = Enum.Font.SourceSans
+FlyTacticalShotgun.Text = "Fly Tactical Shotgun"
+FlyTacticalShotgun.TextColor3 = Color3.fromRGB(0, 0, 0)
+FlyTacticalShotgun.TextSize = 14.000
+FlyTacticalShotgun.MouseButton1Down:connect(function()
+	wait(0) local A_1 = "[Legacy Trash] Tactical Shotgun Fly Enabled" local A_2 = "All" local Event = game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest Event:FireServer(A_1, A_2) 
+	for i,v in pairs(game:GetService'Players'.LocalPlayer.Character:GetChildren())do                 if v:isA("Tool") then                     local a = Instance.new("SelectionBox",v.Handle)                     a.Adornee = v.Handle                         v.GripPos = Vector3.new(10,10,10)                     lplayer.Character.Humanoid:UnequipTools()                 end end					
+end)
+
+FlyFramethrower.Name = "Fly Framethrower"
+FlyFramethrower.Parent = Main
+FlyFramethrower.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
+FlyFramethrower.BorderSizePixel = 0
+FlyFramethrower.Position = UDim2.new(0.584329486, 0, 0.826086998, 0)
+FlyFramethrower.Size = UDim2.new(0, 129, 0, 35)
+FlyFramethrower.Font = Enum.Font.SourceSans
+FlyFramethrower.Text = "Fly FlameThrower"
+FlyFramethrower.TextColor3 = Color3.fromRGB(0, 0, 0)
+FlyFramethrower.TextSize = 14.000
+FlyRPG.MouseButton1Down:connect(function()
+	wait(0) local A_1 = "[Legacy Trash] Flamethrower Fly Enabled" local A_2 = "All" local Event = game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest Event:FireServer(A_1, A_2) 
+	for i,v in pairs(game:GetService'Players'.LocalPlayer.Character:GetChildren())do                 if v:isA("Tool") then                     local a = Instance.new("SelectionBox",v.Handle)                     a.Adornee = v.Handle                         v.GripPos = Vector3.new(10,10,10)                     lplayer.Character.Humanoid:UnequipTools()                 end end
+end)
+
+FlyRPG.Name = "Fly RPG"
+FlyRPG.Parent = Main
+FlyRPG.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
+FlyRPG.BorderSizePixel = 0
+FlyRPG.Position = UDim2.new(0.243027896, 0, 0.722222269, 0)
+FlyRPG.Size = UDim2.new(0, 129, 0, 35)
+FlyRPG.Font = Enum.Font.SourceSans
+FlyRPG.Text = "Fly RPG"
+FlyRPG.TextColor3 = Color3.fromRGB(0, 0, 0)
+FlyRPG.TextSize = 14.000
+FlyRPG.MouseButton1Down:connect(function()
+	wait(0) local A_1 = "[Legacy Trash] RPG Fly Enabled" local A_2 = "All" local Event = game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest Event:FireServer(A_1, A_2) 
+	for i,v in pairs(game:GetService'Players'.LocalPlayer.Character:GetChildren())do                 if v:isA("Tool") then                     local a = Instance.new("SelectionBox",v.Handle)                     a.Adornee = v.Handle                         v.GripPos = Vector3.new(10,10,10)                     lplayer.Character.Humanoid:UnequipTools()                 end end
+end)
+
+FlyStopsign.Name = "Fly Stopsign"
+FlyStopsign.Parent = Main
+FlyStopsign.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
+FlyStopsign.BorderSizePixel = 0
+FlyStopsign.Position = UDim2.new(0.0717131495, 0, 0.722222209, 0)
+FlyStopsign.Size = UDim2.new(0, 129, 0, 35)
+FlyStopsign.Font = Enum.Font.SourceSans
+FlyStopsign.Text = "Fly Stopsign"
+FlyStopsign.TextColor3 = Color3.fromRGB(0, 0, 0)
+FlyStopsign.TextSize = 14.000
+FlyStopsign.MouseButton1Down:connect(function()
+	wait(0) local A_1 = "[Legacy Trash] Stopsign Fly Enabled" local A_2 = "All" local Event = game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest Event:FireServer(A_1, A_2) 
+	for i,v in pairs(game:GetService'Players'.LocalPlayer.Character:GetChildren())do                 if v:isA("Tool") then                     local a = Instance.new("SelectionBox",v.Handle)                     a.Adornee = v.Handle                         v.GripPos = Vector3.new(10,10,10)                     lplayer.Character.Humanoid:UnequipTools()                 end end				
+end)
+
+MeleeReach.Name = "Melee Reach"
+MeleeReach.Parent = Main
+MeleeReach.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
+MeleeReach.BorderSizePixel = 0
+MeleeReach.Position = UDim2.new(0.828685284, 0, 0.497584581, 0)
+MeleeReach.Size = UDim2.new(0, 129, 0, 35)
+MeleeReach.Font = Enum.Font.SourceSans
+MeleeReach.Text = "Melee Reach"
+MeleeReach.TextColor3 = Color3.fromRGB(0, 0, 0)
+MeleeReach.TextSize = 14.000
+MeleeReach.MouseButton1Down:connect(function()
+	wait(0) local A_1 = "[Legacy Trash] Melee Reach Enabled" local A_2 = "All" local Event = game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest Event:FireServer(A_1, A_2) 
+	LP = game.Players.LocalPlayer
+	for i,v in ipairs(LP.Character:GetDescendants()) do
+		if v:IsA("MeshPart") then v.Massless = true
+			v.CanCollide = false
+			v.CustomPhysicalProperties = PhysicalProperties.new(0, 0, 0, 0, 0)
+
+		end
+	end
+
+	for i,v in ipairs(game.workspace:GetDescendants()) do
+		if v:IsA("Seat") then 
+			v.Disabled = true
+		end
+	end
+	x = 35
+	y = 35
+	z = 35
+
+
+	penis = Vector3.new(x,y,z)
+
+	LP.Character.RightHand.Size = penis
+
+	LP.Character.RightHand.Transparency = 1
+	local selectionBox = Instance.new("SelectionBox",LP.Character.RightHand)
+	selectionBox.Adornee = LP.Character.RightHand
+	selectionBox.Color3 = Color3.new(1,0,0)
+
+	LP.Character.LeftHand.Size = penis
+	LP.Character.BodyEffects.SpecialParts.LeftHand.Size = penis
+
+	LP.Character.LeftHand.Transparency = 1
+	local selectionBox = Instance.new("SelectionBox",LP.Character.LeftHand)
+	selectionBox.Adornee = LP.Character.LeftHand
+	selectionBox.Color3 = Color3.new(1,0,0)		
+end)
+
+AntiStomp.Name = "Anti Stomp"
+AntiStomp.Parent = Main
+AntiStomp.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
+AntiStomp.BorderSizePixel = 0
+AntiStomp.Position = UDim2.new(0.657370567, 0, 0.497584581, 0)
+AntiStomp.Size = UDim2.new(0, 129, 0, 35)
+AntiStomp.Font = Enum.Font.SourceSans
+AntiStomp.Text = "Anti Stomp"
+AntiStomp.TextColor3 = Color3.fromRGB(0, 0, 0)
+AntiStomp.TextSize = 14.000
+AntiStomp.MouseButton1Down:connect(function()
+	wait(0) local A_1 = "[Legacy Trash] Anti Stomp Enabled" local A_2 = "All" local Event = game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest Event:FireServer(A_1, A_2) 
+	pcall(function() if tostring(game.PlaceId) == "2788229376" then local corepackages = game:GetService"CorePackages" local localplayer = game:GetService"Players".LocalPlayer local run = game:GetService"RunService" run:BindToRenderStep("rrrrrrrrrrr",2000,function() pcall(function() if localplayer.Character.Humanoid.Health <= 30 then localplayer.Character.Humanoid:UnequipTools() localplayer.Character.Humanoid:Destroy() workspace.CurrentCamera.CameraSubject = localplayer.Character wait() local prt = Instance.new("Model", corepackages); Instance.new("Part", prt).Name="Torso"; Instance.new("Part", prt).Name="Head"; Instance.new("Humanoid", prt).Name="Humanoid"; localplayer.Character=prt end end) pcall(function() if localplayer.Character.Humanoid.FloorMaterial == "Brick" then ReplicatedStorage:FireServer("Stomp") end end) end) loadstring(game:HttpGet("https://pastebin.com/raw/MQ3wc7Zq", true))() end end)									
+end)
+
+AntiAFK.Name = "Anti-AFK"
+AntiAFK.Parent = Main
+AntiAFK.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
+AntiAFK.BorderSizePixel = 0
+AntiAFK.Position = UDim2.new(0.183266938, 0, 0.497584581, 0)
+AntiAFK.Size = UDim2.new(0, 129, 0, 35)
+AntiAFK.Font = Enum.Font.SourceSans
+AntiAFK.Text = "Anti-AFK"
+AntiAFK.TextColor3 = Color3.fromRGB(0, 0, 0)
+AntiAFK.TextSize = 14.000
+AntiAFK.MouseButton1Down:connect(function()
+	wait(0) local A_1 = "[Legacy Trash] Anti-AFK Mode Enabled" local A_2 = "All" local Event = game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest Event:FireServer(A_1, A_2) 
+	local vu = game:GetService("VirtualUser")
+	game:GetService("Players").LocalPlayer.Idled:connect(function()
+		vu:Button2Down(Vector2.new(0,0),workspace.CurrentCamera.CFrame)
+		wait(1)
+		vu:Button2Up(Vector2.new(0,0),workspace.CurrentCamera.CFrame)
+	end)											
+end)
+
+LagMusic.Name = "Lag Music"
+LagMusic.Parent = Main
+LagMusic.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
+LagMusic.BorderSizePixel = 0
+LagMusic.Position = UDim2.new(0.0119521916, 0, 0.497584581, 0)
+LagMusic.Size = UDim2.new(0, 129, 0, 35)
+LagMusic.Font = Enum.Font.SourceSans
+LagMusic.Text = "No Wait"
+LagMusic.TextColor3 = Color3.fromRGB(0, 0, 0)
+LagMusic.TextSize = 14.000
+LagMusic.MouseButton1Down:connect(function()
+	wait(0) local A_1 = "[Legacy Trash] No Wait Mode Enabled" local A_2 = "All" local Event = game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest Event:FireServer(A_1, A_2) 
+	wait()
+	plr.PlayerGui.MainScreenGui.PepperSpray:Destroy()
+	plr.PlayerGui.MainScreenGui.SNOWBALLFRAME:Destroy()					
+end)
+
+ChatLogs.Name = "Chat Logs"
+ChatLogs.Parent = Main
+ChatLogs.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
+ChatLogs.BorderSizePixel = 0
+ChatLogs.Position = UDim2.new(0.828685284, 0, 0.318840623, 0)
+ChatLogs.Size = UDim2.new(0, 129, 0, 35)
+ChatLogs.Font = Enum.Font.SourceSans
+ChatLogs.Text = "Chat-Logs"
+ChatLogs.TextColor3 = Color3.fromRGB(0, 0, 0)
+ChatLogs.TextSize = 14.000
+ChatLogs.MouseButton1Down:connect(function()
+	wait(0) local A_1 = "[Legacy Trash] ChatLogs Enabled" local A_2 = "All" local Event = game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest Event:FireServer(A_1, A_2) 
+	--This script reveals ALL hidden messages in the default chat
+	--chat "/spy" to toggle!
+	enabled = true
+	--if true will check your messages too
+	spyOnMyself = false
+	--if true will chat the logs publicly (fun, risky)
+	public = true --this has to BE ON TRUE OR YOU CANT BYPASS CHAT it makes /e visible to everyon
+	--if true will use /me to stand out
+	publicItalics = true
+	--customize private logs
+	privateProperties = {
+		Color = Color3.fromRGB(0,255,255); 
+		Font = Enum.Font.SourceSansBold;
+		TextSize = 18;
+	}
+	--////////////////////////////////////////////////////////////////
+	local StarterGui = game:GetService("StarterGui")
+	local Players = game:GetService("Players")
+	local player = Players.LocalPlayer
+	local saymsg = game:GetService("ReplicatedStorage"):WaitForChild("DefaultChatSystemChatEvents"):WaitForChild("SayMessageRequest")
+	local getmsg = game:GetService("ReplicatedStorage"):WaitForChild("DefaultChatSystemChatEvents"):WaitForChild("OnMessageDoneFiltering")
+	local instance = (_G.chatSpyInstance or 0) + 1
+	_G.chatSpyInstance = instance
+
+	local function onChatted(p,msg)
+		if _G.chatSpyInstance == instance then
+			if p==player and msg:lower():sub(1,4)=="/[Legacy Trash]" then
+				enabled = not enabled
+				wait(0.3)
+				privateProperties.Text = "{SPY "..(enabled and "EN" or "DIS").."ABLED}"
+				StarterGui:SetCore("ChatMakeSystemMessage",privateProperties)
+			elseif enabled and (spyOnMyself==true or p~=player) then
+				msg = msg:gsub("[\n\r]",''):gsub("\t",' '):gsub("[ ]+",' ')
+				local hidden = true
+				local conn = getmsg.OnClientEvent:Connect(function(packet,channel)
+					if packet.SpeakerUserId==p.UserId and packet.Message==msg:sub(#msg-#packet.Message+1) and (channel=="All" or (channel=="Team" and public==false and Players[packet.FromSpeaker].Team==player.Team)) then
+						hidden = false
+					end
+				end)
+				wait(1)
+				conn:Disconnect()
+				if hidden and enabled then
+					if public then
+						saymsg:FireServer((publicItalics and "/me " or '').."[Legacy X] [".. p.Name .."]: "..msg,"All")
+					else
+						privateProperties.Text = "[Legacy Trash] [".. p.Name .."]: "..msg
+						StarterGui:SetCore("ChatMakeSystemMessage",privateProperties)
+					end
+				end
+			end
+		end
+	end
+
+	for _,p in ipairs(Players:GetPlayers()) do
+		p.Chatted:Connect(function(msg) onChatted(p,msg) end)
+	end
+	Players.PlayerAdded:Connect(function(p)
+		p.Chatted:Connect(function(msg) onChatted(p,msg) end)
+	end)
+	privateProperties.Text = "{[Legacy Trash] "..(enabled and "EN" or "DIS").."ABLED}"
+	StarterGui:SetCore("ChatMakeSystemMessage",privateProperties)
+	local chatFrame = player.PlayerGui.Chat.Frame
+	chatFrame.ChatChannelParentFrame.Visible = true
+	chatFrame.ChatBarParentFrame.Position = chatFrame.ChatChannelParentFrame.Position+UDim2.new(UDim.new(),chatFrame.ChatChannelParentFrame.Size.Y)
+
+	--Type /e before your messages. Lowercase only.
+	game:GetService("Players").LocalPlayer.Chatted:Connect(function(a)
+		if a:sub(1,3)=="/e " then 
+			local b = "VVV ".. a:sub(4) .." VVV"
+			game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(""..string.gsub(string.gsub(string.gsub(string.gsub(string.gsub(string.gsub(string.gsub(string.gsub(string.gsub(string.gsub(string.gsub(string.gsub(string.gsub(string.gsub(string.gsub(string.gsub(string.gsub(string.gsub(string.gsub(string.gsub(string.gsub(string.gsub(string.gsub(string.gsub(string.gsub(string.gsub(string.gsub(string.gsub(string.gsub(string.gsub(string.gsub(string.gsub(string.gsub(string.gsub(string.gsub(string.gsub(string.gsub(string.gsub(string.gsub(string.gsub(string.gsub(string.gsub(string.gsub(string.gsub(string.gsub(string.gsub(string.gsub(string.gsub(string.gsub(string.gsub(string.gsub(string.gsub(string.gsub(string.gsub(string.gsub(string.gsub(string.gsub(string.gsub(string.gsub(string.gsub(string.gsub(string.gsub(string.gsub(string.gsub(string.gsub(string.gsub(string.gsub(string.gsub(string.gsub(string.gsub(string.gsub(string.gsub(string.gsub(string.gsub(string.gsub(string.gsub(string.gsub(string.gsub(string.gsub(string.gsub(string.gsub(string.gsub(string.gsub(string.gsub(string.gsub(string.gsub(string.gsub(string.gsub(string.gsub(string.gsub(string.gsub(string.gsub(string.gsub(string.gsub(string.gsub(string.gsub(string.gsub(string.gsub(string.gsub(string.gsub(string.gsub(string.gsub(string.gsub(string.gsub(string.gsub(string.gsub(string.gsub(string.gsub(string.gsub(string.gsub(string.gsub(b,"Q","Q᠎"),"W","W᠎"),"E","E᠎"),"R","R᠎"),"T","T᠎"),"Y","Y᠎"),"U","U᠎"),"I","I᠎"),"O","O᠎"),"P","P᠎"),"A","A᠎"),"S","S᠎"),"D","D᠎"),"F","F᠎"),"G","G᠎"),"H","H᠎"),"J","J᠎"),"K","K᠎"),"L","L᠎"),"Z","Z᠎"),"X","X᠎"),"C","C᠎"),"V","V᠎"),"B","B᠎"),"N","N᠎"),"M","M᠎"),"q","q᠎"),"w","w᠎"),"e","e᠎"),"r","r᠎"),"t","t᠎"),"y","y᠎"),"u","u᠎"),"i","i᠎"),"o","o᠎"),"p","p᠎"),"a","a᠎"),"s","s᠎"),"d","d᠎"),"f","f᠎"),"g","g᠎"),"h","h᠎"),"j","j᠎"),"k","k᠎"),"l","l᠎"),"z","z᠎"),"x","x᠎"),"c","c᠎"),"v","v᠎"),"b","b᠎"),"n","n᠎"),"m","m᠎"),"f᠎u᠎c᠎","f᠎u᠎؜c᠎"),"s᠎h᠎i᠎t᠎","s᠎h᠎؜i᠎t᠎"),"d᠎i᠎c᠎k᠎","d᠎i᠎؜c᠎k᠎"),"c᠎o᠎c᠎k᠎","c᠎o᠎؜c᠎k᠎"),"f᠎a᠎g᠎","f᠎a᠎؜g᠎"),"b᠎i᠎t᠎c᠎h᠎","b᠎i᠎؜t᠎c᠎h᠎"),"a᠎s᠎s᠎h᠎o᠎l᠎e᠎","a᠎s᠎؜s᠎h᠎o᠎l᠎e᠎"),"p᠎e᠎n᠎i᠎","p᠎e᠎؜n᠎i᠎"),"v᠎a᠎g᠎","v᠎a᠎؜g᠎"),"w᠎h᠎a᠎t᠎ t᠎h᠎e᠎ f᠎u᠎؜c᠎","w᠎h᠎؜a᠎t᠎ t᠎h᠎e᠎ f᠎u᠎؜c᠎"),"k؜i؜k᠎","k؜؜i؜k᠎"),"f؜a؜g؜g؜o؜","f؜؜a؜g؜g؜o؜"),"n᠎i᠎g᠎g᠎a᠎","n᠎؜i᠎g᠎g᠎a"),"n᠎i᠎g᠎g᠎e᠎r᠎","n᠎؜i᠎g᠎g᠎e᠎r᠎"),"n᠎i᠎g ","n᠎؜i᠎g "),"s᠎e᠎m᠎e᠎n᠎","s᠎e᠎؜m᠎e᠎n᠎"),"h᠎e᠎n᠎t᠎a᠎i᠎","h᠎e᠎؜n᠎t᠎a᠎i᠎"),"p᠎o᠎r᠎n᠎","p᠎o᠎؜r᠎n᠎"),"w᠎w᠎w᠎.","w᠎w᠎؜w᠎."),"᠎.c᠎o᠎m᠎","᠎.c᠎o᠎؜m᠎"),"᠎.n᠎e᠎t᠎","᠎.n᠎e᠎؜t᠎"),"᠎.o᠎r᠎g᠎","᠎.o᠎r᠎؜g᠎"),"h᠎i᠎t᠎l᠎","h᠎i᠎؜t᠎l᠎"),"l᠎o᠎l᠎i᠎c᠎o᠎n᠎","l᠎o᠎؜l᠎i᠎c᠎o᠎n᠎"),"d᠎i᠎s᠎c᠎o᠎r᠎d᠎","d᠎i᠎؜s᠎c᠎o᠎r᠎d᠎"),"l؜e؜s؜b؜o؜","l؜e؜؜s؜b؜o؜"),"s᠎e᠎x᠎","s᠎e᠎؜x᠎"),"b᠎u᠎l᠎l᠎s᠎h᠎؜i᠎t᠎","b᠎u᠎؜l᠎l᠎s᠎h᠎؜i᠎t᠎"),"m᠎o᠎t᠎h᠎e᠎r᠎f᠎u᠎؜c᠎","m᠎o᠎؜t᠎h᠎e᠎r᠎f᠎u᠎؜c᠎"),"p᠎u᠎s᠎s᠎","p᠎u᠎؜s᠎s᠎"),"c᠎u᠎n᠎t᠎","c᠎u᠎؜n᠎t᠎"),"c᠎u᠎m᠎","c᠎u᠎؜m᠎"),"b᠎e᠎a᠎n᠎","b᠎e᠎؜a᠎n᠎"),"c᠎h᠎i᠎n᠎","c᠎h᠎؜i᠎n᠎"),"c᠎o᠎o᠎n᠎","c᠎o᠎؜o᠎n᠎"),"c᠎o᠎c᠎a᠎i᠎n᠎e᠎","c᠎o᠎؜c᠎a᠎i᠎n᠎e᠎"),"m᠎o᠎t᠎h᠎e᠎r᠎ f᠎u᠎؜c᠎","m᠎o᠎؜t᠎h᠎e᠎r᠎ f᠎u᠎؜c᠎"),"t᠎i᠎t᠎s᠎","t᠎i᠎؜t᠎s᠎"),"t᠎i᠎t᠎t᠎","t᠎i᠎؜t᠎t᠎"),"w᠎h᠎o᠎r᠎e᠎","w᠎h᠎؜o᠎r᠎e᠎"),"s᠎l᠎u᠎t᠎","s᠎l᠎؜u᠎t᠎"),"p᠎r᠎o᠎s᠎t᠎i᠎t᠎u᠎d᠎e᠎","p᠎r᠎؜o᠎s᠎t᠎i᠎t᠎u᠎d᠎e᠎᠎"),"g᠎a᠎y᠎w᠎a᠎d᠎","g᠎a᠎؜y᠎w᠎a᠎d᠎"),"r᠎a᠎p ","r᠎a᠎؜p᠎"),"'","'᠎"),",",",᠎"),"!","!᠎"),"?","?᠎"),"/","/᠎"),"h᠎t᠎t᠎p᠎","h᠎t᠎t᠎p᠎؜"),"h᠎t᠎t᠎p᠎s᠎","h᠎t᠎t᠎p᠎s᠎؜"),"F᠎a᠎g᠎g᠎o᠎t","F᠎aggot"),"A᠎s᠎s᠎h᠎o᠎l᠎e᠎s᠎","A᠎ssholes"),"S᠎h᠎i᠎t᠎t᠎","S᠎hitt"),"m᠎o᠎f᠎o᠎","m᠎o᠎؜f᠎o᠎"),"N᠎i᠎g᠎g᠎","N᠎igg"),"p᠎r᠎o᠎s᠎t᠎i᠎t᠎u᠎t᠎e᠎᠎","p᠎r᠎᠎o᠎s᠎t᠎i᠎t᠎u᠎t᠎e᠎"),"᠎ "," ")," "," ").."","All")
+		end 
+	end)											
+end)
+
+AntiBag.Name = "Anti Bag"
+AntiBag.Parent = Main
+AntiBag.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
+AntiBag.BorderSizePixel = 0
+AntiBag.Position = UDim2.new(0.657370567, 0, 0.318840623, 0)
+AntiBag.Size = UDim2.new(0, 129, 0, 35)
+AntiBag.Font = Enum.Font.SourceSans
+AntiBag.Text = "Anti-Bag"
+AntiBag.TextColor3 = Color3.fromRGB(0, 0, 0)
+AntiBag.TextSize = 14.000
+AntiBag.MouseButton1Down:connect(function()
+	wait(0) local A_1 = "[Legacy Trash] AntiBag Enabled" local A_2 = "All" local Event = game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest Event:FireServer(A_1, A_2) 
+	local LocalPlayer = game:GetService("Players").LocalPlayer
+	local char = LocalPlayer.Character
+	char.ChildAdded:Connect(function(sock)
+		if sock:IsA("MeshPart") then do
+				wait(0.1)
+				sock:Destroy()
+			end
+		end
+	end)										
+end)
+
+TpQ.Name = "Tp [Q]"
+TpQ.Parent = Main
+TpQ.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
+TpQ.BorderSizePixel = 0
+TpQ.Position = UDim2.new(0.183266938, 0, 0.318840623, 0)
+TpQ.Size = UDim2.new(0, 129, 0, 35)
+TpQ.Font = Enum.Font.SourceSans
+TpQ.Text = "Anti Flashbang"
+TpQ.TextColor3 = Color3.fromRGB(0, 0, 0)
+TpQ.TextSize = 14.000
+TpQ.MouseButton1Down:connect(function()
+	wait(0) local A_1 = "[Legacy Trash] Anti-Flashbang Enabled" local A_2 = "All" local Event = game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest Event:FireServer(A_1, A_2) 
+
+	while true do
+		local XD = game:GetService("Players").LocalPlayer.PlayerGui.MainScreenGui
+
+		if XD:FindFirstChild("whiteScreen") then
+			XD.whiteScreen:Destroy()
+		end
+		wait(0.2)
+	end										
+end)
+
+BulletProof.Name = "Bullet Proof"
+BulletProof.Parent = Main
+BulletProof.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
+BulletProof.BorderSizePixel = 0
+BulletProof.Position = UDim2.new(0.0119521916, 0, 0.318840623, 0)
+BulletProof.Size = UDim2.new(0, 129, 0, 35)
+BulletProof.Font = Enum.Font.SourceSans
+BulletProof.Text = "Bullet Proof"
+BulletProof.TextColor3 = Color3.fromRGB(0, 0, 0)
+BulletProof.TextSize = 14.000
+BulletProof.MouseButton1Down:connect(function()
+end)
+
+UnlockPlayers.Name = "Unlock - Players"
+UnlockPlayers.Parent = Main
+UnlockPlayers.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
+UnlockPlayers.BorderSizePixel = 0
+UnlockPlayers.Position = UDim2.new(0.387782216, 0, 0.413043469, 0)
+UnlockPlayers.Size = UDim2.new(0, 177, 0, 35)
+UnlockPlayers.Font = Enum.Font.SourceSans
+UnlockPlayers.Text = "Unlock - Players"
+UnlockPlayers.TextColor3 = Color3.fromRGB(0, 0, 0)
+UnlockPlayers.TextSize = 14.000
+UnlockPlayers.MouseButton1Down:connect(function()
+	wait(0) local A_1 = "[Legacy Trash] Untargetted Player" local A_2 = "All" local Event = game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest Event:FireServer(A_1, A_2) 																
+end)
+
+LockPlayers.Name = "Lock - Players"
+LockPlayers.Parent = Main
+LockPlayers.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
+LockPlayers.BorderSizePixel = 0
+LockPlayers.Position = UDim2.new(0.387782216, 0, 0.318840593, 0)
+LockPlayers.Size = UDim2.new(0, 177, 0, 35)
+LockPlayers.Font = Enum.Font.SourceSans
+LockPlayers.Text = "Lock - Players"
+LockPlayers.TextColor3 = Color3.fromRGB(0, 0, 0)
+LockPlayers.TextSize = 14.000
+LockPlayers.MouseButton1Down:connect(function()
+	wait(0) local A_1 = "[Legacy Trash] Targetting Player" local A_2 = "All" local Event = game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest Event:FireServer(A_1, A_2) 
+end)
+
+AllEmotes.Name = "All Emotes"
+AllEmotes.Parent = Main
+AllEmotes.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
+AllEmotes.BorderSizePixel = 0
+AllEmotes.Position = UDim2.new(0.657370567, 0, 0.202898577, 0)
+AllEmotes.Size = UDim2.new(0, 129, 0, 35)
+AllEmotes.Font = Enum.Font.SourceSans
+AllEmotes.Text = "All Emotes"
+AllEmotes.TextColor3 = Color3.fromRGB(0, 0, 0)
+AllEmotes.TextSize = 14.000
+AllEmotes.MouseButton1Down:connect(function()
+	loadstring(game:HttpGet(('https://pastebin.com/raw/59es3rSu'),true))()														
+end)
+
+AllAnimation.Name = "All Animation"
+AllAnimation.Parent = Main
+AllAnimation.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
+AllAnimation.BorderSizePixel = 0
+AllAnimation.Position = UDim2.new(0.828685284, 0, 0.202898577, 0)
+AllAnimation.Size = UDim2.new(0, 129, 0, 35)
+AllAnimation.Font = Enum.Font.SourceSans
+AllAnimation.Text = "All Animation"
+AllAnimation.TextColor3 = Color3.fromRGB(0, 0, 0)
+AllAnimation.TextSize = 14.000
+AllAnimation.MouseButton1Down:connect(function()
+	loadstring(game:HttpGet(('https://pastebin.com/raw/58EJG2tw'),true))()
+end)
+
+
+FlyX.Name = "Fly [X]"
+FlyX.Parent = Main
+FlyX.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
+FlyX.BorderSizePixel = 0
+FlyX.Position = UDim2.new(0.183266938, 0, 0.202898577, 0)
+FlyX.Size = UDim2.new(0, 129, 0, 35)
+FlyX.Font = Enum.Font.SourceSans
+FlyX.Text = "Fly [X]"
+FlyX.TextColor3 = Color3.fromRGB(0, 0, 0)
+FlyX.TextSize = 14.000
+FlyX.MouseButton1Down:connect(function()
+	wait(0) local A_1 = "[Legacy Trash] Fly Enabled" local A_2 = "All" local Event = game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest Event:FireServer(A_1, A_2)
+	local plr = game.Players.LocalPlayer
+	local mouse = plr:GetMouse()
+
+	localplayer = plr
+
+	if workspace:FindFirstChild("Core") then
+		workspace.Core:Destroy()
+	end
+
+	local Core = Instance.new("Part")
+	Core.Name = "Core"
+	Core.Size = Vector3.new(0.05, 0.05, 0.05)
+
+	spawn(function()
+		Core.Parent = workspace
+		local Weld = Instance.new("Weld", Core)
+		Weld.Part0 = Core
+		Weld.Part1 = localplayer.Character.LowerTorso
+		Weld.C0 = CFrame.new(0, 0, 0)
+	end)
+
+	workspace:WaitForChild("Core")
+
+	local torso = workspace.Core
+	flying = true
+	local speed=40
+	local keys={a=false,d=false,w=false,s=false}
+	local e1
+	local e2
+	local function start()
+		local pos = Instance.new("BodyPosition",torso)
+		local gyro = Instance.new("BodyGyro",torso)
+		pos.Name="EPIXPOS"
+		pos.maxForce = Vector3.new(math.huge, math.huge, math.huge)
+		pos.position = torso.Position
+		gyro.maxTorque = Vector3.new(9e9, 9e9, 9e9)
+		gyro.cframe = torso.CFrame
+		repeat
+			wait()
+			localplayer.Character.Humanoid.PlatformStand=true
+			local new=gyro.cframe - gyro.cframe.p + pos.position
+			if not keys.w and not keys.s and not keys.a and not keys.d then
+				speed=40
+			end
+			if keys.w then
+				new = new + workspace.CurrentCamera.CoordinateFrame.lookVector * speed
+				speed=speed+0
+			end
+			if keys.s then
+				new = new - workspace.CurrentCamera.CoordinateFrame.lookVector * speed
+				speed=speed+0
+			end
+			if keys.d then
+				new = new * CFrame.new(speed,0,0)
+				speed=speed+0
+			end
+			if keys.a then
+				new = new * CFrame.new(-speed,0,0)
+				speed=speed+0
+			end
+			if speed>10 then
+				speed=40
+			end
+			pos.position=new.p
+			if keys.w then
+				gyro.cframe = workspace.CurrentCamera.CoordinateFrame*CFrame.Angles(-math.rad(speed*0),0,0)
+			elseif keys.s then
+				gyro.cframe = workspace.CurrentCamera.CoordinateFrame*CFrame.Angles(math.rad(speed*0),0,0)
+			else
+				gyro.cframe = workspace.CurrentCamera.CoordinateFrame
+			end
+		until flying == false
+		if gyro then gyro:Destroy() end
+		if pos then pos:Destroy() end
+		flying=false
+		localplayer.Character.Humanoid.PlatformStand=false
+		speed=40
+	end
+	e1=mouse.KeyDown:connect(function(key)
+		if not torso or not torso.Parent then flying=false e1:disconnect() e2:disconnect() return end
+		if key=="w" then
+			keys.w=true
+		elseif key=="s" then
+			keys.s=true
+		elseif key=="a" then
+			keys.a=true
+		elseif key=="d" then
+			keys.d=true
+		elseif key=="x" then
+			if flying==true then
+				flying=false
+			else
+				flying=true
+				start()
+			end
+		end
+	end)
+	e2=mouse.KeyUp:connect(function(key)
+		if key=="w" then
+			keys.w=false
+		elseif key=="s" then
+			keys.s=false
+		elseif key=="a" then
+			keys.a=false
+		elseif key=="d" then
+			keys.d=false
+		end
+	end)
+	start() 																		
+end)
+
+Page2.Name = "Page2"
+Page2.Parent = Main
+Page2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Page2.BackgroundTransparency = 1.000
+Page2.BorderSizePixel = 0
+Page2.Position = UDim2.new(0.13413018, 0, 0.625603855, 0)
+Page2.Size = UDim2.new(0, 71, 0, 34)
+Page2.Font = Enum.Font.Cartoon
+Page2.Text = "Page"
+Page2.TextColor3 = Color3.fromRGB(255, 0, 0)
+Page2.TextScaled = true
+Page2.TextSize = 14.000
+Page2.TextWrapped = true
+
+Weapons.Name = "Weapons"
+Weapons.Parent = Main
+Weapons.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Weapons.BackgroundTransparency = 1.000
+Weapons.BorderSizePixel = 0
+Weapons.Position = UDim2.new(0.00398406386, 0, 0.625603855, 0)
+Weapons.Size = UDim2.new(0, 98, 0, 34)
+Weapons.Font = Enum.Font.Cartoon
+Weapons.Text = "Weapons"
+Weapons.TextColor3 = Color3.fromRGB(255, 255, 255)
+Weapons.TextScaled = true
+Weapons.TextSize = 14.000
+Weapons.TextWrapped = true
+
+TextBox.Parent = Main
+TextBox.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextBox.Position = UDim2.new(0.373858482, 0, 0.218362331, 0)
+TextBox.Size = UDim2.new(0, 200, 0, 28)
+TextBox.Font = Enum.Font.SourceSans
+TextBox.Text = ""
+TextBox.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextBox.TextSize = 14.000
+
+ReachKnife.Name = "Reach Knife"
+ReachKnife.Parent = Main
+ReachKnife.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
+ReachKnife.BorderSizePixel = 0
+ReachKnife.Position = UDim2.new(0.243027896, 0, 0.826087058, 0)
+ReachKnife.Size = UDim2.new(0, 129, 0, 35)
+ReachKnife.Font = Enum.Font.SourceSans
+ReachKnife.Text = "Reach Knife"
+ReachKnife.TextColor3 = Color3.fromRGB(0, 0, 0)
+ReachKnife.TextSize = 14.000
+ReachKnife.MouseButton1Down:connect(function()
+	wait(0) local A_1 = "[Legacy Trash] Knife Reach Enabled to 40%" local A_2 = "All" local Event = game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest Event:FireServer(A_1, A_2) 
+	game.Players.LocalPlayer.Backpack["[Knife]"].Handle.Size = Vector3.new(100, 100, 100)
+end)			
+
+
+ReachStopsign.Name = "Reach Stopsign"
+ReachStopsign.Parent = Main
+ReachStopsign.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
+ReachStopsign.BorderSizePixel = 0
+ReachStopsign.Position = UDim2.new(0.0717131495, 0, 0.826086998, 0)
+ReachStopsign.Size = UDim2.new(0, 129, 0, 35)
+ReachStopsign.Font = Enum.Font.SourceSans
+ReachStopsign.Text = "Reach Stopsign"
+ReachStopsign.TextColor3 = Color3.fromRGB(0, 0, 0)
+ReachStopsign.TextSize = 14.000
+ReachStopsign.MouseButton1Down:connect(function()
+	wait(0) local A_1 = "[Legacy Trash] Reach Stopsign Enabled To 50%" local A_2 = "All" local Event = game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest Event:FireServer(A_1, A_2) 
+	game.Players.LocalPlayer.Backpack["[StopSign]"].Handle.Size = Vector3.new(100, 100, 100)
+end)
+
+
+Close.Name = "Close"
+Close.Parent = Main
+Close.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Close.BackgroundTransparency = 1.000
+Close.BorderSizePixel = 0
+Close.Position = UDim2.new(0.934927046, 0, 0, 0)
+Close.Size = UDim2.new(0, 48, 0, 34)
+Close.Font = Enum.Font.Cartoon
+Close.Text = "X"
+Close.TextColor3 = Color3.fromRGB(255, 0, 0)
+Close.TextScaled = true
+Close.TextSize = 14.000
+Close.TextWrapped = true
+Close.MouseButton1Down:connect(function()
+	wait(0) local A_1 = "[Legacy Trash] Legacy Trash Closed" local A_2 = "All" local Event = game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest Event:FireServer(A_1, A_2) 
+	OpenFrame.Visible = true
+	Main.Visible = false
+end)
